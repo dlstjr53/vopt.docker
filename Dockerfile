@@ -5,8 +5,9 @@ MAINTAINER "Joel Kim" joel.kim@veranostech.com
 RUN cd /bin && rm sh && ln -s bash sh
 
 # Ubuntu repository in Korea
-ENV REPO http://kr.archive.ubuntu.com/ubuntu/
+# ENV REPO http://kr.archive.ubuntu.com/ubuntu/
 # ENV REPO http://ftp.neowiz.com/ubuntu/
+ENV REPO http://ftp.daumkakao.com/ubuntu/
 # in China,
 # ENV REPO http://mirrors.aliyun.com/ubuntu/
 
