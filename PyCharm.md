@@ -111,3 +111,22 @@ you need to complete the following settings and configurations.
 
 If you need to install the source code in docker container, 
 attach the docker and install it.
+
+If you have ``vopt.gbi`` project code in docker's ``/home/user/Code/vopt.gbi`` directory:
+
+1. attach docker container:
+   ```
+   $ docker attach vopt
+   ```
+2. inside the docker container, move code directory:
+   ```
+   $ cd /home/user/Code/vopt.gbi
+   ```
+3. active ``vopt`` environment:
+   ```
+   $ source activate vopt
+   ```
+4. install ``vopt.gbi`` package:
+   ```
+   $ source dev_install.sh
+   ```
