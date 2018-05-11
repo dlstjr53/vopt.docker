@@ -246,7 +246,7 @@ chown $USER_ID:$USER_ID /home/$USER_ID/*  && \
 echo ""
 
 # Add Tini. Tini operates as a process subreaper for jupyter. This prevents kernel crashes.
-ADD https://github.com/krallin/tini/releases/download/v0.16.1/tini /usr/bin/tini
+ADD https://github.com/krallin/tini/releases/download/v0.17.0/tini /usr/bin/tini
 RUN chmod a+x /usr/bin/tini
 
 ENTRYPOINT ["/usr/bin/tini", "--", "/bin/bash", ".docker-entrypoint.sh"]

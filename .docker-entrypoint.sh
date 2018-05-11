@@ -11,5 +11,8 @@ if [ -f /var/run/redis_6379.pid ]; then
    rm /var/run/redis_6379.pid
 fi
 
+# start supervisord
+sudo -u $USER_ID -i '/usr/bin/supervisord'
+
 # run bash in user account
 sudo -u $USER_ID -i '/bin/bash'

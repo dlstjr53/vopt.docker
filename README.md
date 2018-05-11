@@ -75,19 +75,19 @@ Run
 
 * Linux, Mac with Docker for Mac, or Windows with Docker for Windows
   ```
-  $ docker run --name vopt --rm -Pit -p 8222:22 veranostech/vopt
+  $ docker run --name vopt --rm -Pit -p 8222:22 -p 8887:8887 veranostech/vopt
   ```
 
 * Mac with Docker Toolbox
   ```
   $ docker-machine start vopt
   $ eval $(docker-machine env vopt)
-  $ docker run --name vopt --rm -Pit -p 8222:22 veranostech/vopt
+  $ docker run --name vopt --rm -Pit -p 8222:22 -p 8887:8887 veranostech/vopt
   ```
 
 * Windows with Docker Toolbox (in Docker Quickstart Terminal)
   ```
   $ docker-machine start vopt
   $ eval $(docker-machine env vopt)
-  $ docker run --name vopt --rm -Pit -p 8222:22 veranostech/vopt
+  $ docker run --name vopt --rm -Pit -p 8222:22 -p 8887:8887 veranostech/vopt
   ```
