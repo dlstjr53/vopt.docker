@@ -69,7 +69,17 @@ and builds a docker image named `veranostech/vopt` on it.
   ```
   $ source build_dockertoolbox_windows.sh
   ```
-  
+
+
+In ``Dockerfile``, we provide several Ubuntu repositories.
+
+ * http://kr.archive.ubuntu.com/ubuntu/
+ * http://ftp.neowiz.com/ubuntu/
+ * http://ftp.daumkakao.com/ubuntu/
+
+If there is package download problems in a repo server,
+comment out the other repo server and use it instead.
+
 
 Run
 ---
