@@ -4,7 +4,8 @@ MAINTAINER "Joel Kim" joel.kim@veranostech.com
 # Replace sh with bash
 RUN cd /bin && rm sh && ln -s bash sh
 
-# Ubuntu repository in Korea
+# Ubuntu repositories in Korea
+# If a repo server has a problem, comment-out other repo server and use it instead.
 # ENV REPO http://kr.archive.ubuntu.com/ubuntu/
 # ENV REPO http://ftp.neowiz.com/ubuntu/
 ENV REPO http://ftp.daumkakao.com/ubuntu/
