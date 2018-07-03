@@ -84,6 +84,15 @@ comment out the other repo server and use it instead.
 Run
 ---
 
+Run and go into docker container by typing following commmands. 
+If you success in starting docker container, 
+you will go into the container and the prompt will be changed as:
+```
+user@4497c9c5e6d9:~$
+```
+If you want to go out the docker container without stopping, type ``Ctrl-p + Ctrl-q + Enter``.
+
+
 * Linux, Mac with "Docker for Mac", or Windows with "Docker for Windows"
   ```
   $ docker run --name vopt --rm -Pit -p 8222:22 -p 8887:8887 veranostech/vopt
@@ -102,3 +111,29 @@ Run
   $ eval $(docker-machine env vopt)
   $ docker run --name vopt --rm -Pit -p 8222:22 -p 8887:8887 veranostech/vopt
   ```
+
+If you want to share your host computer's directory inside docker container, add ``-v`` option like:
+```
+docker run --name vopt --rm -Pit -p 8222:22 -p 8887:8887 -v /c/Users/호스트계정이름:/home/user/hosthome veranostech/vopt
+```
+
+
+Connect to Jupyter Notebook
+----------------------------
+
+If docker container start, jupyter notebook server start automatically.
+If you want to connect to jupyter notebook server in container:
+
+1. Attach (go into) the container:
+   ```
+   $ docker attach vopt
+   ```
+
+2. Find jupyter notebook link:
+   ```
+   user@4497c9c5e6d9:~$ $ jupyter notebook list
+   Currently running servers:
+   http://localhost:8888/?token=c8de56fa4deed24899803e93c227592aef6538f93025fe01
+   ```
+   
+3. Web browse to the link and start notebook
