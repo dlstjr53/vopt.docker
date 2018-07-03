@@ -95,26 +95,26 @@ If you want to go out the docker container without stopping, type ``Ctrl-p + Ctr
 
 * Linux, Mac with "Docker for Mac", or Windows with "Docker for Windows"
   ```
-  $ docker run --name vopt --rm -Pit -p 8222:22 -p 8887:8887 veranostech/vopt
+  $ docker run --name vopt -Pit -p 8222:22 -p 8887:8887 veranostech/vopt
   ```
 
 * Mac with "Docker Toolbox"
   ```
   $ docker-machine start vopt
   $ eval $(docker-machine env vopt)
-  $ docker run --name vopt --rm -Pit -p 8222:22 -p 8887:8887 veranostech/vopt
+  $ docker run --name vopt -Pit -p 8222:22 -p 8887:8887 veranostech/vopt
   ```
 
 * Windows with "Docker Toolbox" (in Docker Quickstart Terminal)
   ```
   $ docker-machine start vopt
   $ eval $(docker-machine env vopt)
-  $ docker run --name vopt --rm -Pit -p 8222:22 -p 8887:8887 veranostech/vopt
+  $ docker run --name vopt -Pit -p 8222:22 -p 8887:8887 veranostech/vopt
   ```
 
 If you want to share your host computer's directory inside docker container, add ``-v`` option like:
 ```
-docker run --name vopt --rm -Pit -p 8222:22 -p 8887:8887 -v /c/Users/호스트계정이름:/home/user/hosthome veranostech/vopt
+docker run --name vopt -Pit -p 8222:22 -p 8887:8887 -v /c/Users/호스트계정이름:/home/user/hosthome veranostech/vopt
 ```
 
 
